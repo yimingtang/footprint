@@ -1,5 +1,5 @@
 //
-//  FPTViewController.h
+//  FPTProfileViewController.h
 //  Footprint
 //
 //  Created by Yiming Tang on 7/25/15.
@@ -8,7 +8,6 @@
 
 @import UIKit;
 
-@interface FPTViewController : UIViewController
+@interface FPTProfileViewController : UIViewController
 
 @end
-

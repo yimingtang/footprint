@@ -10,11 +10,13 @@
 		3E3F34AF6FE87FE47A13E333 /* Pods_Footprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F1F797C81B6336FD00395612 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797C71B6336FD00395612 /* main.m */; };
 		F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */; };
-		F1F797D11B6336FD00395612 /* FPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797D01B6336FD00395612 /* FPTViewController.m */; };
+		F1F797D11B6336FD00395612 /* FPTFootprintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797D01B6336FD00395612 /* FPTFootprintsViewController.m */; };
 		F1F797D61B6336FD00395612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F797D51B6336FD00395612 /* Images.xcassets */; };
 		F1F797E51B6336FD00395612 /* FootprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797E41B6336FD00395612 /* FootprintTests.m */; };
 		F1F797FA1B634B3900395612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F797F81B634B3900395612 /* LaunchScreen.xib */; };
 		F1F797FD1B634C4100395612 /* Footprint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */; };
+		F1F798031B63578F00395612 /* FPTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798021B63578E00395612 /* FPTProfileViewController.m */; };
+		F1F798061B63579F00395612 /* FPTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798051B63579F00395612 /* FPTSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +38,18 @@
 		F1F797C71B6336FD00395612 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1F797C91B6336FD00395612 /* FPTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTAppDelegate.h; sourceTree = "<group>"; };
 		F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTAppDelegate.m; sourceTree = "<group>"; };
-		F1F797CF1B6336FD00395612 /* FPTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTViewController.h; sourceTree = "<group>"; };
-		F1F797D01B6336FD00395612 /* FPTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTViewController.m; sourceTree = "<group>"; };
+		F1F797CF1B6336FD00395612 /* FPTFootprintsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTFootprintsViewController.h; sourceTree = "<group>"; };
+		F1F797D01B6336FD00395612 /* FPTFootprintsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTFootprintsViewController.m; sourceTree = "<group>"; };
 		F1F797D51B6336FD00395612 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F1F797DE1B6336FD00395612 /* FootprintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F797E31B6336FD00395612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F797E41B6336FD00395612 /* FootprintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintTests.m; sourceTree = "<group>"; };
 		F1F797F91B634B3900395612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Footprint.xcdatamodel; sourceTree = "<group>"; };
+		F1F798011B63578E00395612 /* FPTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTProfileViewController.h; sourceTree = "<group>"; };
+		F1F798021B63578E00395612 /* FPTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTProfileViewController.m; sourceTree = "<group>"; };
+		F1F798041B63579F00395612 /* FPTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTSettingsViewController.h; sourceTree = "<group>"; };
+		F1F798051B63579F00395612 /* FPTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +141,12 @@
 			children = (
 				F1F797C91B6336FD00395612 /* FPTAppDelegate.h */,
 				F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */,
-				F1F797CF1B6336FD00395612 /* FPTViewController.h */,
-				F1F797D01B6336FD00395612 /* FPTViewController.m */,
+				F1F797CF1B6336FD00395612 /* FPTFootprintsViewController.h */,
+				F1F797D01B6336FD00395612 /* FPTFootprintsViewController.m */,
+				F1F798011B63578E00395612 /* FPTProfileViewController.h */,
+				F1F798021B63578E00395612 /* FPTProfileViewController.m */,
+				F1F798041B63579F00395612 /* FPTSettingsViewController.h */,
+				F1F798051B63579F00395612 /* FPTSettingsViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -336,9 +346,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */,
-				F1F797D11B6336FD00395612 /* FPTViewController.m in Sources */,
+				F1F797D11B6336FD00395612 /* FPTFootprintsViewController.m in Sources */,
+				F1F798061B63579F00395612 /* FPTSettingsViewController.m in Sources */,
 				F1F797C81B6336FD00395612 /* main.m in Sources */,
 				F1F797FD1B634C4100395612 /* Footprint.xcdatamodeld in Sources */,
+				F1F798031B63578F00395612 /* FPTProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

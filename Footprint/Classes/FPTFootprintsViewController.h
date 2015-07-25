@@ -1,5 +1,5 @@
 //
-//  FPTAppDelegate.h
+//  FPTFootprintsViewController.h
 //  Footprint
 //
 //  Created by Yiming Tang on 7/25/15.
@@ -8,8 +8,6 @@
 
 @import UIKit;
 
-@interface FPTAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (nonatomic) UIWindow *window;
+@interface FPTFootprintsViewController : UIViewController
 
 @end
