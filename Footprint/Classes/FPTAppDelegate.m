@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  FPTAppDelegate.m
 //  Footprint
 //
 //  Created by Yiming Tang on 7/25/15.
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "FPTAppDelegate.h"
 
-@interface AppDelegate ()
+@interface FPTAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation FPTAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

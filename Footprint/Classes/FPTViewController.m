@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  FPTViewController.m
 //  Footprint
 //
 //  Created by Yiming Tang on 7/25/15.
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FPTViewController.h"
 
-@interface ViewController ()
+@interface FPTViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FPTViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

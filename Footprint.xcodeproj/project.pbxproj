@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC19815B0D0E6CB431C0EAA0 /* Pods_Footprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF412C76687803531FFA36A8 /* Pods_Footprint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3E3F34AF6FE87FE47A13E333 /* Pods_Footprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F1F797C81B6336FD00395612 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797C71B6336FD00395612 /* main.m */; };
-		F1F797CB1B6336FD00395612 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797CA1B6336FD00395612 /* AppDelegate.m */; };
-		F1F797CE1B6336FD00395612 /* Footprint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1F797CC1B6336FD00395612 /* Footprint.xcdatamodeld */; };
-		F1F797D11B6336FD00395612 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797D01B6336FD00395612 /* ViewController.m */; };
-		F1F797D41B6336FD00395612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F797D21B6336FD00395612 /* Main.storyboard */; };
+		F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */; };
+		F1F797D11B6336FD00395612 /* FPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797D01B6336FD00395612 /* FPTViewController.m */; };
 		F1F797D61B6336FD00395612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F797D51B6336FD00395612 /* Images.xcassets */; };
-		F1F797D91B6336FD00395612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F797D71B6336FD00395612 /* LaunchScreen.xib */; };
 		F1F797E51B6336FD00395612 /* FootprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797E41B6336FD00395612 /* FootprintTests.m */; };
+		F1F797FA1B634B3900395612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F797F81B634B3900395612 /* LaunchScreen.xib */; };
+		F1F797FD1B634C4100395612 /* Footprint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,23 +28,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Footprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B30BAA1E65FF6107D91078A /* Pods-Footprint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Footprint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Footprint/Pods-Footprint.release.xcconfig"; sourceTree = "<group>"; };
 		D033E136D5CDFC7866217C2C /* Pods-Footprint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Footprint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Footprint/Pods-Footprint.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F797C21B6336FD00395612 /* Footprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Footprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F797C61B6336FD00395612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F797C71B6336FD00395612 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1F797C91B6336FD00395612 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F1F797CA1B6336FD00395612 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F1F797CD1B6336FD00395612 /* Footprint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Footprint.xcdatamodel; sourceTree = "<group>"; };
-		F1F797CF1B6336FD00395612 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F1F797D01B6336FD00395612 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F1F797D31B6336FD00395612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1F797C91B6336FD00395612 /* FPTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTAppDelegate.h; sourceTree = "<group>"; };
+		F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTAppDelegate.m; sourceTree = "<group>"; };
+		F1F797CF1B6336FD00395612 /* FPTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTViewController.h; sourceTree = "<group>"; };
+		F1F797D01B6336FD00395612 /* FPTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPTViewController.m; sourceTree = "<group>"; };
 		F1F797D51B6336FD00395612 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F1F797D81B6336FD00395612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F1F797DE1B6336FD00395612 /* FootprintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F797E31B6336FD00395612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F797E41B6336FD00395612 /* FootprintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintTests.m; sourceTree = "<group>"; };
-		FF412C76687803531FFA36A8 /* Pods_Footprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Footprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F797F91B634B3900395612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Footprint.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC19815B0D0E6CB431C0EAA0 /* Pods_Footprint.framework in Frameworks */,
+				3E3F34AF6FE87FE47A13E333 /* Pods_Footprint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +68,7 @@
 		092A9AA6F12F9A902138D779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF412C76687803531FFA36A8 /* Pods_Footprint.framework */,
+				25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,10 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				F1F797C41B6336FD00395612 /* Footprint */,
+				F1F797F11B6349E700395612 /* FootprintKit */,
 				F1F797E11B6336FD00395612 /* FootprintTests */,
-				F1F797C31B6336FD00395612 /* Products */,
-				6FD59BD99C2C57054F239CEC /* Pods */,
 				092A9AA6F12F9A902138D779 /* Frameworks */,
+				6FD59BD99C2C57054F239CEC /* Pods */,
+				F1F797C31B6336FD00395612 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,26 +106,11 @@
 		F1F797C41B6336FD00395612 /* Footprint */ = {
 			isa = PBXGroup;
 			children = (
-				F1F797C91B6336FD00395612 /* AppDelegate.h */,
-				F1F797CA1B6336FD00395612 /* AppDelegate.m */,
-				F1F797CF1B6336FD00395612 /* ViewController.h */,
-				F1F797D01B6336FD00395612 /* ViewController.m */,
-				F1F797D21B6336FD00395612 /* Main.storyboard */,
-				F1F797D51B6336FD00395612 /* Images.xcassets */,
-				F1F797D71B6336FD00395612 /* LaunchScreen.xib */,
-				F1F797CC1B6336FD00395612 /* Footprint.xcdatamodeld */,
-				F1F797C51B6336FD00395612 /* Supporting Files */,
+				F1F797F01B633C5900395612 /* Other Sources */,
+				F1F797EF1B633C5100395612 /* Resources */,
+				F1F797EE1B633C4800395612 /* Classes */,
 			);
 			path = Footprint;
-			sourceTree = "<group>";
-		};
-		F1F797C51B6336FD00395612 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F1F797C61B6336FD00395612 /* Info.plist */,
-				F1F797C71B6336FD00395612 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F1F797E11B6336FD00395612 /* FootprintTests */ = {
@@ -146,6 +130,59 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F1F797EE1B633C4800395612 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F1F797C91B6336FD00395612 /* FPTAppDelegate.h */,
+				F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */,
+				F1F797CF1B6336FD00395612 /* FPTViewController.h */,
+				F1F797D01B6336FD00395612 /* FPTViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F1F797EF1B633C5100395612 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1F797F81B634B3900395612 /* LaunchScreen.xib */,
+				F1F797C61B6336FD00395612 /* Info.plist */,
+				F1F797D51B6336FD00395612 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F1F797F01B633C5900395612 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F1F797C71B6336FD00395612 /* main.m */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F1F797F11B6349E700395612 /* FootprintKit */ = {
+			isa = PBXGroup;
+			children = (
+				F1F797F31B634A1100395612 /* Other Sources */,
+				F1F797F21B6349FF00395612 /* Classes */,
+			);
+			path = FootprintKit;
+			sourceTree = "<group>";
+		};
+		F1F797F21B6349FF00395612 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F1F797F31B634A1100395612 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,8 +194,8 @@
 				F1F797BE1B6336FD00395612 /* Sources */,
 				F1F797BF1B6336FD00395612 /* Frameworks */,
 				F1F797C01B6336FD00395612 /* Resources */,
-				66D277DC70E671F30B4456A2 /* Embed Pods Frameworks */,
 				425D31A112FA21CCBBCC5834 /* Copy Pods Resources */,
+				77DDF7BDED507E552014773F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,11 +230,13 @@
 		F1F797BA1B6336FD00395612 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FPT;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Yiming Tang";
 				TargetAttributes = {
 					F1F797C11B6336FD00395612 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 74UX6D4SCA;
 					};
 					F1F797DD1B6336FD00395612 = {
 						CreatedOnToolsVersion = 6.4;
@@ -229,8 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F797D41B6336FD00395612 /* Main.storyboard in Resources */,
-				F1F797D91B6336FD00395612 /* LaunchScreen.xib in Resources */,
+				F1F797FA1B634B3900395612 /* LaunchScreen.xib in Resources */,
 				F1F797D61B6336FD00395612 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +313,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Footprint/Pods-Footprint-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66D277DC70E671F30B4456A2 /* Embed Pods Frameworks */ = {
+		77DDF7BDED507E552014773F /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,10 +335,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F797CE1B6336FD00395612 /* Footprint.xcdatamodeld in Sources */,
-				F1F797CB1B6336FD00395612 /* AppDelegate.m in Sources */,
-				F1F797D11B6336FD00395612 /* ViewController.m in Sources */,
+				F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */,
+				F1F797D11B6336FD00395612 /* FPTViewController.m in Sources */,
 				F1F797C81B6336FD00395612 /* main.m in Sources */,
+				F1F797FD1B634C4100395612 /* Footprint.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,18 +361,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F1F797D21B6336FD00395612 /* Main.storyboard */ = {
+		F1F797F81B634B3900395612 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F1F797D31B6336FD00395612 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F1F797D71B6336FD00395612 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1F797D81B6336FD00395612 /* Base */,
+				F1F797F91B634B3900395612 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -378,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -416,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,9 +460,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Footprint/Info.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Footprint/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -442,9 +474,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Footprint/Info.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Footprint/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -515,12 +549,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F1F797CC1B6336FD00395612 /* Footprint.xcdatamodeld */ = {
+		F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F1F797CD1B6336FD00395612 /* Footprint.xcdatamodel */,
+				F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */,
 			);
-			currentVersion = F1F797CD1B6336FD00395612 /* Footprint.xcdatamodel */;
+			currentVersion = F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */;
 			path = Footprint.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

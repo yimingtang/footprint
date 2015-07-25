@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FPTAppDelegate.h
 //  Footprint
 //
 //  Created by Yiming Tang on 7/25/15.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface FPTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
