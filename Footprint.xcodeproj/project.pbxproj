@@ -14,9 +14,16 @@
 		F1F797D61B6336FD00395612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F797D51B6336FD00395612 /* Images.xcassets */; };
 		F1F797E51B6336FD00395612 /* FootprintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797E41B6336FD00395612 /* FootprintTests.m */; };
 		F1F797FA1B634B3900395612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F797F81B634B3900395612 /* LaunchScreen.xib */; };
-		F1F797FD1B634C4100395612 /* Footprint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */; };
 		F1F798031B63578F00395612 /* FPTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798021B63578E00395612 /* FPTProfileViewController.m */; };
 		F1F798061B63579F00395612 /* FPTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798051B63579F00395612 /* FPTSettingsViewController.m */; };
+		F1F798091B636C4F00395612 /* FPTFootprintAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798081B636C4F00395612 /* FPTFootprintAPIClient.m */; };
+		F1F7980A1B636C4F00395612 /* FPTFootprintAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798081B636C4F00395612 /* FPTFootprintAPIClient.m */; };
+		F1F7981A1B637BAA00395612 /* FPTPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798111B637BAA00395612 /* FPTPost.m */; };
+		F1F7981B1B637BAA00395612 /* FPTRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798131B637BAA00395612 /* FPTRule.m */; };
+		F1F7981C1B637BAA00395612 /* FPTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798151B637BAA00395612 /* FPTUser.m */; };
+		F1F7981D1B637BAA00395612 /* FPTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798171B637BAA00395612 /* FPTTag.m */; };
+		F1F7981E1B637BAA00395612 /* FPTFootprint.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798191B637BAA00395612 /* FPTFootprint.m */; };
+		F1F798231B63849C00395612 /* FPTFootprint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1F798211B63849C00395612 /* FPTFootprint.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +52,23 @@
 		F1F797E31B6336FD00395612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F797E41B6336FD00395612 /* FootprintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintTests.m; sourceTree = "<group>"; };
 		F1F797F91B634B3900395612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Footprint.xcdatamodel; sourceTree = "<group>"; };
 		F1F798011B63578E00395612 /* FPTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTProfileViewController.h; sourceTree = "<group>"; };
 		F1F798021B63578E00395612 /* FPTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTProfileViewController.m; sourceTree = "<group>"; };
 		F1F798041B63579F00395612 /* FPTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTSettingsViewController.h; sourceTree = "<group>"; };
 		F1F798051B63579F00395612 /* FPTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTSettingsViewController.m; sourceTree = "<group>"; };
+		F1F798071B636C4F00395612 /* FPTFootprintAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTFootprintAPIClient.h; sourceTree = "<group>"; };
+		F1F798081B636C4F00395612 /* FPTFootprintAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTFootprintAPIClient.m; sourceTree = "<group>"; };
+		F1F798101B637BAA00395612 /* FPTPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTPost.h; sourceTree = "<group>"; };
+		F1F798111B637BAA00395612 /* FPTPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTPost.m; sourceTree = "<group>"; };
+		F1F798121B637BAA00395612 /* FPTRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTRule.h; sourceTree = "<group>"; };
+		F1F798131B637BAA00395612 /* FPTRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTRule.m; sourceTree = "<group>"; };
+		F1F798141B637BAA00395612 /* FPTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTUser.h; sourceTree = "<group>"; };
+		F1F798151B637BAA00395612 /* FPTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTUser.m; sourceTree = "<group>"; };
+		F1F798161B637BAA00395612 /* FPTTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTTag.h; sourceTree = "<group>"; };
+		F1F798171B637BAA00395612 /* FPTTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTTag.m; sourceTree = "<group>"; };
+		F1F798181B637BAA00395612 /* FPTFootprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTFootprint.h; sourceTree = "<group>"; };
+		F1F798191B637BAA00395612 /* FPTFootprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTFootprint.m; sourceTree = "<group>"; };
+		F1F798221B63849C00395612 /* FPTFootprint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FPTFootprint.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +200,17 @@
 		F1F797F21B6349FF00395612 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F1F798101B637BAA00395612 /* FPTPost.h */,
+				F1F798111B637BAA00395612 /* FPTPost.m */,
+				F1F798121B637BAA00395612 /* FPTRule.h */,
+				F1F798131B637BAA00395612 /* FPTRule.m */,
+				F1F798141B637BAA00395612 /* FPTUser.h */,
+				F1F798151B637BAA00395612 /* FPTUser.m */,
+				F1F798161B637BAA00395612 /* FPTTag.h */,
+				F1F798171B637BAA00395612 /* FPTTag.m */,
+				F1F798181B637BAA00395612 /* FPTFootprint.h */,
+				F1F798191B637BAA00395612 /* FPTFootprint.m */,
+				F1F7980B1B636C5500395612 /* Networking */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -188,9 +218,18 @@
 		F1F797F31B634A1100395612 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */,
+				F1F798211B63849C00395612 /* FPTFootprint.xcdatamodeld */,
 			);
 			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F1F7980B1B636C5500395612 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F1F798071B636C4F00395612 /* FPTFootprintAPIClient.h */,
+				F1F798081B636C4F00395612 /* FPTFootprintAPIClient.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,12 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F7981D1B637BAA00395612 /* FPTTag.m in Sources */,
+				F1F7981C1B637BAA00395612 /* FPTUser.m in Sources */,
 				F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */,
 				F1F797D11B6336FD00395612 /* FPTFootprintsViewController.m in Sources */,
+				F1F798231B63849C00395612 /* FPTFootprint.xcdatamodeld in Sources */,
 				F1F798061B63579F00395612 /* FPTSettingsViewController.m in Sources */,
 				F1F797C81B6336FD00395612 /* main.m in Sources */,
-				F1F797FD1B634C4100395612 /* Footprint.xcdatamodeld in Sources */,
+				F1F7981E1B637BAA00395612 /* FPTFootprint.m in Sources */,
 				F1F798031B63578F00395612 /* FPTProfileViewController.m in Sources */,
+				F1F798091B636C4F00395612 /* FPTFootprintAPIClient.m in Sources */,
+				F1F7981A1B637BAA00395612 /* FPTPost.m in Sources */,
+				F1F7981B1B637BAA00395612 /* FPTRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F7980A1B636C4F00395612 /* FPTFootprintAPIClient.m in Sources */,
 				F1F797E51B6336FD00395612 /* FootprintTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,13 +607,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F1F797FB1B634C4100395612 /* Footprint.xcdatamodeld */ = {
+		F1F798211B63849C00395612 /* FPTFootprint.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */,
+				F1F798221B63849C00395612 /* FPTFootprint.xcdatamodel */,
 			);
-			currentVersion = F1F797FC1B634C4100395612 /* Footprint.xcdatamodel */;
-			path = Footprint.xcdatamodeld;
+			currentVersion = F1F798221B63849C00395612 /* FPTFootprint.xcdatamodel */;
+			path = FPTFootprint.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

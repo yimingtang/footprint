@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Footprint" syncable="YES">
+    <entity name="FPTFootprint" representedClassName="FPTFootprint" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="manually" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="footprints" inverseEntity="Post" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="footprints" inverseEntity="User" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FPTPost" inverseName="footprints" inverseEntity="FPTPost" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FPTUser" inverseName="footprints" inverseEntity="FPTUser" syncable="YES"/>
     </entity>
-    <entity name="Post" syncable="YES">
+    <entity name="FPTPost" representedClassName="FPTPost" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="footprints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Footprint" inverseName="post" inverseEntity="Footprint" syncable="YES"/>
-        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="posts" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="footprints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FPTFootprint" inverseName="post" inverseEntity="FPTFootprint" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FPTTag" inverseName="posts" inverseEntity="FPTTag" syncable="YES"/>
     </entity>
-    <entity name="Rule" syncable="YES">
+    <entity name="FPTRule" representedClassName="FPTRule" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="host" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="threshold" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="rules" inverseEntity="User" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FPTUser" inverseName="rules" inverseEntity="FPTUser" syncable="YES"/>
     </entity>
-    <entity name="Tag" syncable="YES">
+    <entity name="FPTTag" representedClassName="FPTTag" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="tags" inverseEntity="Post" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FPTPost" inverseName="tags" inverseEntity="FPTPost" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES">
+    <entity name="FPTUser" representedClassName="FPTUser" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="footprints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Footprint" inverseName="user" inverseEntity="Footprint" syncable="YES"/>
-        <relationship name="rules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Rule" inverseName="user" inverseEntity="Rule" syncable="YES"/>
+        <relationship name="footprints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FPTFootprint" inverseName="user" inverseEntity="FPTFootprint" syncable="YES"/>
+        <relationship name="rules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FPTRule" inverseName="user" inverseEntity="FPTRule" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Footprint" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="User" positionX="-54" positionY="-9" width="128" height="150"/>
-        <element name="Rule" positionX="-36" positionY="9" width="128" height="135"/>
-        <element name="Tag" positionX="-18" positionY="27" width="128" height="120"/>
-        <element name="Post" positionX="0" positionY="45" width="128" height="150"/>
+        <element name="FPTFootprint" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="FPTPost" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="FPTRule" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="FPTTag" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="FPTUser" positionX="0" positionY="0" width="128" height="150"/>
     </elements>
 </model>
