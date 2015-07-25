@@ -10,9 +10,6 @@
 
 @implementation FPTRule
 
-@dynamic remoteID;
-@dynamic createdAt;
-@dynamic updatedAt;
 @dynamic host;
 @dynamic threshold;
 @dynamic user;

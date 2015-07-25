@@ -24,6 +24,9 @@
 		F1F7981D1B637BAA00395612 /* FPTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798171B637BAA00395612 /* FPTTag.m */; };
 		F1F7981E1B637BAA00395612 /* FPTFootprint.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798191B637BAA00395612 /* FPTFootprint.m */; };
 		F1F798231B63849C00395612 /* FPTFootprint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1F798211B63849C00395612 /* FPTFootprint.xcdatamodeld */; };
+		F1F798261B6385B100395612 /* FPTRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798251B6385B100395612 /* FPTRemoteManagedObject.m */; };
+		F1F798291B638A7900395612 /* FPTDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798281B638A7900395612 /* FPTDefines.m */; };
+		F1F7982E1B638D5C00395612 /* NSDictionary+FootprintKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F7982D1B638D5C00395612 /* NSDictionary+FootprintKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,12 @@
 		F1F798181B637BAA00395612 /* FPTFootprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTFootprint.h; sourceTree = "<group>"; };
 		F1F798191B637BAA00395612 /* FPTFootprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTFootprint.m; sourceTree = "<group>"; };
 		F1F798221B63849C00395612 /* FPTFootprint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FPTFootprint.xcdatamodel; sourceTree = "<group>"; };
+		F1F798241B6385B100395612 /* FPTRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTRemoteManagedObject.h; sourceTree = "<group>"; };
+		F1F798251B6385B100395612 /* FPTRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTRemoteManagedObject.m; sourceTree = "<group>"; };
+		F1F798281B638A7900395612 /* FPTDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTDefines.m; sourceTree = "<group>"; };
+		F1F7982A1B638B3200395612 /* FPTDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTDefines.h; sourceTree = "<group>"; };
+		F1F7982C1B638D5C00395612 /* NSDictionary+FootprintKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FootprintKit.h"; sourceTree = "<group>"; };
+		F1F7982D1B638D5C00395612 /* NSDictionary+FootprintKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FootprintKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,16 +209,10 @@
 		F1F797F21B6349FF00395612 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F1F798101B637BAA00395612 /* FPTPost.h */,
-				F1F798111B637BAA00395612 /* FPTPost.m */,
-				F1F798121B637BAA00395612 /* FPTRule.h */,
-				F1F798131B637BAA00395612 /* FPTRule.m */,
-				F1F798141B637BAA00395612 /* FPTUser.h */,
-				F1F798151B637BAA00395612 /* FPTUser.m */,
-				F1F798161B637BAA00395612 /* FPTTag.h */,
-				F1F798171B637BAA00395612 /* FPTTag.m */,
-				F1F798181B637BAA00395612 /* FPTFootprint.h */,
-				F1F798191B637BAA00395612 /* FPTFootprint.m */,
+				F1F7982B1B638D3500395612 /* Categories */,
+				F1F7982A1B638B3200395612 /* FPTDefines.h */,
+				F1F798281B638A7900395612 /* FPTDefines.m */,
+				F1F798271B6385BC00395612 /* Models */,
 				F1F7980B1B636C5500395612 /* Networking */,
 			);
 			path = Classes;
@@ -230,6 +233,34 @@
 				F1F798081B636C4F00395612 /* FPTFootprintAPIClient.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		F1F798271B6385BC00395612 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1F798181B637BAA00395612 /* FPTFootprint.h */,
+				F1F798191B637BAA00395612 /* FPTFootprint.m */,
+				F1F798101B637BAA00395612 /* FPTPost.h */,
+				F1F798111B637BAA00395612 /* FPTPost.m */,
+				F1F798241B6385B100395612 /* FPTRemoteManagedObject.h */,
+				F1F798251B6385B100395612 /* FPTRemoteManagedObject.m */,
+				F1F798121B637BAA00395612 /* FPTRule.h */,
+				F1F798131B637BAA00395612 /* FPTRule.m */,
+				F1F798161B637BAA00395612 /* FPTTag.h */,
+				F1F798171B637BAA00395612 /* FPTTag.m */,
+				F1F798141B637BAA00395612 /* FPTUser.h */,
+				F1F798151B637BAA00395612 /* FPTUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F1F7982B1B638D3500395612 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F1F7982C1B638D5C00395612 /* NSDictionary+FootprintKit.h */,
+				F1F7982D1B638D5C00395612 /* NSDictionary+FootprintKit.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,8 +421,11 @@
 				F1F797D11B6336FD00395612 /* FPTFootprintsViewController.m in Sources */,
 				F1F798231B63849C00395612 /* FPTFootprint.xcdatamodeld in Sources */,
 				F1F798061B63579F00395612 /* FPTSettingsViewController.m in Sources */,
+				F1F7982E1B638D5C00395612 /* NSDictionary+FootprintKit.m in Sources */,
 				F1F797C81B6336FD00395612 /* main.m in Sources */,
+				F1F798291B638A7900395612 /* FPTDefines.m in Sources */,
 				F1F7981E1B637BAA00395612 /* FPTFootprint.m in Sources */,
+				F1F798261B6385B100395612 /* FPTRemoteManagedObject.m in Sources */,
 				F1F798031B63578F00395612 /* FPTProfileViewController.m in Sources */,
 				F1F798091B636C4F00395612 /* FPTFootprintAPIClient.m in Sources */,
 				F1F7981A1B637BAA00395612 /* FPTPost.m in Sources */,

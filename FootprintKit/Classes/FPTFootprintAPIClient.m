@@ -7,8 +7,8 @@
 //
 
 #import "FPTFootprintAPIClient.h"
+#import "FPTDefines.h"
 
-static NSString *const FPTFootprintAPIBaseURLString = @"http://120.25.151.196/footprint/";
 
 @implementation FPTFootprintAPIClient
 
@@ -16,7 +16,7 @@ static NSString *const FPTFootprintAPIBaseURLString = @"http://120.25.151.196/fo
     static FPTFootprintAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[FPTFootprintAPIClient alloc] initWithBaseURL:[NSURL URLWithString:FPTFootprintAPIBaseURLString]];
+        _sharedClient = [[FPTFootprintAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kFPTAPIBaseURLString]];
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     });
     

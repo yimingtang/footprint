@@ -6,17 +6,19 @@
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
-@import CoreData;
+#import "FPTRemoteManagedObject.h"
 
-@interface FPTUser : NSManagedObject
+extern NSString *const kFPTCurrentUserChangedNotificationName;
 
-@property (nonatomic, retain) NSNumber *remoteID;
-@property (nonatomic, retain) NSDate *createdAt;
-@property (nonatomic, retain) NSDate *updatedAt;
-@property (nonatomic, retain) NSString *username;
-@property (nonatomic, retain) NSString *password;
-@property (nonatomic, retain) NSSet *rules;
-@property (nonatomic, retain) NSSet *footprints;
+@interface FPTUser : FPTRemoteManagedObject
+
+@property (nonatomic) NSString *username;
+@property (nonatomic) NSString *accessToken;
+@property (nonatomic) NSSet *rules;
+@property (nonatomic) NSSet *footprints;
+
++ (FPTUser *)currentUser;
++ (void)setCurrentUser:(FPTUser *)user;
 
 @end
 

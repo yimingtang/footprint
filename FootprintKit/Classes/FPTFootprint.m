@@ -10,9 +10,6 @@
 
 @implementation FPTFootprint
 
-@dynamic remoteID;
-@dynamic createdAt;
-@dynamic updatedAt;
 @dynamic duration;
 @dynamic manually;
 @dynamic user;

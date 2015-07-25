@@ -9,6 +9,9 @@ pod 'AFNetworking'
 # Eliminate your Core Data boilerplate code.
 pod 'SSDataKit'
 
+# Simple Cocoa wrapper for the keychain.
+pod 'SSKeychain'
+
 end
 
 target 'FootprintTests' do

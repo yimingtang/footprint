@@ -35,7 +35,6 @@
     </entity>
     <entity name="FPTUser" representedClassName="FPTUser" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remoteID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
@@ -47,6 +46,6 @@
         <element name="FPTPost" positionX="0" positionY="0" width="128" height="150"/>
         <element name="FPTRule" positionX="0" positionY="0" width="128" height="135"/>
         <element name="FPTTag" positionX="0" positionY="0" width="128" height="120"/>
-        <element name="FPTUser" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="FPTUser" positionX="0" positionY="0" width="128" height="135"/>
     </elements>
 </model>

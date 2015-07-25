@@ -1,16 +1,15 @@
 //
-//  FPTTag.m
+//  NSDictionary+FootprintKit.h
 //  Footprint
 //
 //  Created by Yiming Tang on 7/25/15.
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
-#import "FPTTag.h"
+@import Foundation;
 
-@implementation FPTTag
+@interface NSDictionary (FootprintKit)
 
-@dynamic name;
-@dynamic posts;
+- (id)safeObjectForKey:(id)key;
 
 @end

@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - SSDataKit (0.3.9)
+  - SSKeychain (1.2.3)
 
 DEPENDENCIES:
   - AFNetworking
   - SSDataKit
+  - SSKeychain
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   SSDataKit: bc15712f1adbc43425d61a602120f84fdb970ded
+  SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
 
 COCOAPODS: 0.38.1

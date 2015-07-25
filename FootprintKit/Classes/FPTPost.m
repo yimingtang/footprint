@@ -12,9 +12,6 @@
 
 #pragma mark - Accessors
 
-@dynamic remoteID;
-@dynamic createdAt;
-@dynamic updatedAt;
 @dynamic title;
 @dynamic url;
 @dynamic footprints;

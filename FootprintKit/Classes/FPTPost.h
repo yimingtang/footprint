@@ -6,13 +6,10 @@
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
-@import CoreData;
+#import "FPTRemoteManagedObject.h"
 
-@interface FPTPost : NSManagedObject
+@interface FPTPost : FPTRemoteManagedObject
 
-@property (nonatomic) NSNumber *remoteID;
-@property (nonatomic) NSDate *createdAt;
-@property (nonatomic) NSDate *updatedAt;
 @property (nonatomic) NSString *url;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSSet *footprints;
