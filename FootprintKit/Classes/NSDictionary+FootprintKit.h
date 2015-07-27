@@ -10,6 +10,6 @@
 
 @interface NSDictionary (FootprintKit)
 
-- (id)safeObjectForKey:(id)key;
+- (id)fpk_safeObjectForKey:(id)key;
 
 @end

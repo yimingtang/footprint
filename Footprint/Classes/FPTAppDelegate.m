@@ -8,6 +8,7 @@
 
 #import "FPTAppDelegate.h"
 #import "FPTFootprintsViewController.h"
+@import AFNetworking;
 
 @interface FPTAppDelegate ()
 
@@ -29,6 +30,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Configure network stuff
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+    // Set root view controller
     FPTFootprintsViewController *footprintsViewController = [[FPTFootprintsViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:footprintsViewController];
     self.window.rootViewController = navigationController;

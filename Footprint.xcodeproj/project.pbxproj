@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E3F34AF6FE87FE47A13E333 /* Pods_Footprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A23F0D5CD588499A1EAAE900 /* Pods_Footprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE16EEAF0FA7F90833FB8DAA /* Pods_Footprint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F1F797C81B6336FD00395612 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797C71B6336FD00395612 /* main.m */; };
 		F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797CA1B6336FD00395612 /* FPTAppDelegate.m */; };
 		F1F797D11B6336FD00395612 /* FPTFootprintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F797D01B6336FD00395612 /* FPTFootprintsViewController.m */; };
@@ -27,6 +27,8 @@
 		F1F798261B6385B100395612 /* FPTRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798251B6385B100395612 /* FPTRemoteManagedObject.m */; };
 		F1F798291B638A7900395612 /* FPTDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798281B638A7900395612 /* FPTDefines.m */; };
 		F1F7982E1B638D5C00395612 /* NSDictionary+FootprintKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F7982D1B638D5C00395612 /* NSDictionary+FootprintKit.m */; };
+		F1F798301B64BE4300395612 /* FPTFootprintAPIClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F7982F1B64BE4300395612 /* FPTFootprintAPIClientTests.m */; };
+		F1F798331B65100A00395612 /* NSString+FootprintKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F798321B65100A00395612 /* NSString+FootprintKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Footprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B30BAA1E65FF6107D91078A /* Pods-Footprint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Footprint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Footprint/Pods-Footprint.release.xcconfig"; sourceTree = "<group>"; };
 		D033E136D5CDFC7866217C2C /* Pods-Footprint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Footprint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Footprint/Pods-Footprint.debug.xcconfig"; sourceTree = "<group>"; };
+		EE16EEAF0FA7F90833FB8DAA /* Pods_Footprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Footprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F797C21B6336FD00395612 /* Footprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Footprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F797C61B6336FD00395612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F797C71B6336FD00395612 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +80,9 @@
 		F1F7982A1B638B3200395612 /* FPTDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPTDefines.h; sourceTree = "<group>"; };
 		F1F7982C1B638D5C00395612 /* NSDictionary+FootprintKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FootprintKit.h"; sourceTree = "<group>"; };
 		F1F7982D1B638D5C00395612 /* NSDictionary+FootprintKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FootprintKit.m"; sourceTree = "<group>"; };
+		F1F7982F1B64BE4300395612 /* FPTFootprintAPIClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTFootprintAPIClientTests.m; sourceTree = "<group>"; };
+		F1F798311B65100A00395612 /* NSString+FootprintKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FootprintKit.h"; sourceTree = "<group>"; };
+		F1F798321B65100A00395612 /* NSString+FootprintKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FootprintKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E3F34AF6FE87FE47A13E333 /* Pods_Footprint.framework in Frameworks */,
+				A23F0D5CD588499A1EAAE900 /* Pods_Footprint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +107,7 @@
 		092A9AA6F12F9A902138D779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				25ED0FA0FB8F17BF6D36CB8D /* Pods_Footprint.framework */,
+				EE16EEAF0FA7F90833FB8DAA /* Pods_Footprint.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		F1F797E11B6336FD00395612 /* FootprintTests */ = {
 			isa = PBXGroup;
 			children = (
+				F1F7982F1B64BE4300395612 /* FPTFootprintAPIClientTests.m */,
 				F1F797E41B6336FD00395612 /* FootprintTests.m */,
 				F1F797E21B6336FD00395612 /* Supporting Files */,
 			);
@@ -259,6 +265,8 @@
 			children = (
 				F1F7982C1B638D5C00395612 /* NSDictionary+FootprintKit.h */,
 				F1F7982D1B638D5C00395612 /* NSDictionary+FootprintKit.m */,
+				F1F798311B65100A00395612 /* NSString+FootprintKit.h */,
+				F1F798321B65100A00395612 /* NSString+FootprintKit.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -275,7 +283,7 @@
 				F1F797BF1B6336FD00395612 /* Frameworks */,
 				F1F797C01B6336FD00395612 /* Resources */,
 				425D31A112FA21CCBBCC5834 /* Copy Pods Resources */,
-				77DDF7BDED507E552014773F /* Embed Pods Frameworks */,
+				BFD86D7D6755E97644BA0E36 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,7 +401,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Footprint/Pods-Footprint-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77DDF7BDED507E552014773F /* Embed Pods Frameworks */ = {
+		BFD86D7D6755E97644BA0E36 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -417,6 +425,7 @@
 			files = (
 				F1F7981D1B637BAA00395612 /* FPTTag.m in Sources */,
 				F1F7981C1B637BAA00395612 /* FPTUser.m in Sources */,
+				F1F798331B65100A00395612 /* NSString+FootprintKit.m in Sources */,
 				F1F797CB1B6336FD00395612 /* FPTAppDelegate.m in Sources */,
 				F1F797D11B6336FD00395612 /* FPTFootprintsViewController.m in Sources */,
 				F1F798231B63849C00395612 /* FPTFootprint.xcdatamodeld in Sources */,
@@ -437,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F798301B64BE4300395612 /* FPTFootprintAPIClientTests.m in Sources */,
 				F1F7980A1B636C4F00395612 /* FPTFootprintAPIClient.m in Sources */,
 				F1F797E51B6336FD00395612 /* FootprintTests.m in Sources */,
 			);

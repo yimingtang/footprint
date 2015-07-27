@@ -30,7 +30,14 @@ static FPTUser *__currentUser = nil;
 
 - (void)unpackDictionary:(NSDictionary *)dictionary {
     [super unpackDictionary:dictionary];
-    self.username = [dictionary safeObjectForKey:@"username"];
+    self.username = [dictionary fpk_safeObjectForKey:@"username"];
+}
+
+
+#pragma mark - SSRemoteManagedObject
+
++ (NSString *)remoteIDDictionaryKey {
+    return @"userId";
 }
 
 
