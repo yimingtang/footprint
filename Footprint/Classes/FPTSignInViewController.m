@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
+@import SVProgressHUD;
 #import "FPTSignInViewController.h"
+#import "FPTFootprintAPIClient.h"
 
 static NSString *const kFPTSignInViewControllerCellIdentifier = @"cell";
 
@@ -132,12 +134,53 @@ static NSString *const kFPTSignInViewControllerCellIdentifier = @"cell";
 
 
 - (void)signIn:(id)sender {
+    if (!self.navigationItem.rightBarButtonItem.enabled) {
+        return;
+    }
     
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Signing in…", nil)];
+    
+    FPTFootprintAPIClient *client = [FPTFootprintAPIClient sharedClient];
+    NSString *username = self.usernameTextField.text;
+    NSString *password = self.passwordTextField.text;
+    
+    [client signInWithUsername:username password:password success:^(NSURLSessionDataTask *task, id responseObject) {
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Signed In", nil)];
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        });
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSString *message = [error.localizedDescription capitalizedString];
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [SVProgressHUD showErrorWithStatus:message];
+        });
+    }];
 }
 
 
 - (void)signUp:(id)sender {
+    if (!self.navigationItem.rightBarButtonItem.enabled) {
+        return;
+    }
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Signing up…", nil)];
     
+    FPTFootprintAPIClient *client = [FPTFootprintAPIClient sharedClient];
+    NSString *username = self.usernameTextField.text;
+    NSString *password = self.passwordTextField.text;
+
+    [client signUpWithUsername:username password:password success:^(NSURLSessionDataTask *task, id responseObject) {
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Signed Up", nil)];
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        });
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSString *message = [error.localizedDescription capitalizedString];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD showErrorWithStatus:message];
+        });
+    }];
 }
 
 

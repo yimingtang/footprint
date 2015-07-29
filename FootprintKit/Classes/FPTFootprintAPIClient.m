@@ -6,10 +6,16 @@
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
+/**
+ NOTE: The API design of server side is very ugly. This client is a quick and dirty implementation.
+ */
+
 #import "FPTFootprintAPIClient.h"
 #import "FPTDefines.h"
 #import "FPTUser.h"
 #import "NSString+FootprintKit.h"
+
+static NSString *const FPTFootprintAPIClientErrorDomain = @"FPTFootprintAPIClient";
 
 @interface FPTFootprintAPIClient ()
 
@@ -59,23 +65,30 @@
     };
     
     return [self POST:@"user/register.php" parameters:parameters success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-        NSLog(@"[FPTFootprintAPIClient] Sign Up Succeeded: %@", responseObject);
+        BOOL succeeded = [responseObject[@"ok"] integerValue] == 1;
         
-        __weak NSManagedObjectContext *context = [FPTUser mainQueueContext];
-        [context performBlockAndWait:^{
-            NSDictionary *dictionary = responseObject[@"data"];
-            if (!dictionary) {
-                return;
-            }
+        if (succeeded) {
+            __weak NSManagedObjectContext *context = [FPTUser mainQueueContext];
+            [context performBlockAndWait:^{
+                NSDictionary *dictionary = responseObject[@"data"];
+                if (!dictionary) {
+                    return;
+                }
+                
+                FPTUser *user = [FPTUser objectWithDictionary:dictionary];
+                user.accessToken = [dictionary objectForKey:@"token"];
+                [self changeUser:user];
+                [FPTUser setCurrentUser:user];
+            }];
             
-            FPTUser *user = [FPTUser objectWithDictionary:dictionary];
-            user.accessToken = [dictionary objectForKey:@"token"];
-            [self changeUser:user];
-            [FPTUser setCurrentUser:user];
-        }];
-        
-        if (success) {
-            success(task, responseObject);
+            if (success) {
+                success(task, responseObject);
+            }
+        } else {
+            NSString *errorMessage = responseObject[@"error"];
+            if (failure) {
+                failure(task, [NSError errorWithDomain:FPTFootprintAPIClientErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey: errorMessage}]);
+            }
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"[FPTFootprintAPIClient] Sign Up Failed: %@", error.description);
@@ -98,24 +111,31 @@
     };
     
     return [self POST:@"user/login.php" parameters:parameters success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
-        NSLog(@"[FPTFootprintAPIClient] Sign In Succeeded: %@", responseObject);
+        BOOL succeeded = [responseObject[@"ok"] integerValue] == 1;
         
-        __weak NSManagedObjectContext *context = [FPTUser mainQueueContext];
-        [context performBlockAndWait:^{
+        if (succeeded) {
             NSDictionary *dictionary = responseObject[@"data"];
-            if (!dictionary) {
-                return;
-            }
+            __weak NSManagedObjectContext *context = [FPTUser mainQueueContext];
+            [context performBlockAndWait:^{
+                if (!dictionary) {
+                    return;
+                }
+                
+                FPTUser *user = [FPTUser objectWithDictionary:dictionary];
+                user.accessToken = [dictionary objectForKey:@"token"];
+                [user save];
+                [self changeUser:user];
+                [FPTUser setCurrentUser:user];
+            }];
             
-            FPTUser *user = [FPTUser objectWithDictionary:dictionary];
-            user.accessToken = [dictionary objectForKey:@"token"];
-            [user save];
-            [self changeUser:user];
-            [FPTUser setCurrentUser:user];
-        }];
-        
-        if (success) {
-            success(task, responseObject);
+            if (success) {
+                success(task, responseObject);
+            }
+        } else {
+            NSString *errorMessage = responseObject[@"error"];
+            if (failure) {
+                failure(task, [NSError errorWithDomain:FPTFootprintAPIClientErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey: errorMessage}]);
+            }
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"[FPTFootprintAPIClient] Sign In Failed: %@", error.description);

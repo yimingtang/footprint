@@ -30,7 +30,7 @@ static FPTUser *__currentUser = nil;
 
 - (void)unpackDictionary:(NSDictionary *)dictionary {
     [super unpackDictionary:dictionary];
-    self.username = [dictionary fpk_safeObjectForKey:@"username"];
+    self.username = [dictionary fpk_safeObjectForKey:@"userName"];
 }
 
 

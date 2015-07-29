@@ -12,6 +12,9 @@ pod 'SSDataKit'
 # Simple Cocoa wrapper for the keychain.
 pod 'SSKeychain'
 
+# A clean and lightweight progress HUD for your iOS app.
+pod 'SVProgressHUD'
+
 end
 
 target 'FootprintTests' do

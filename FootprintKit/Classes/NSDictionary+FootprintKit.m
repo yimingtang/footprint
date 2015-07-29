@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (FootprintKit)
 
-- (id)safeObjectForKey:(id)key {
+- (id)fpk_safeObjectForKey:(id)key {
     id value = [self objectForKey:key];
     if (value == [NSNull null]) {
         return nil;
