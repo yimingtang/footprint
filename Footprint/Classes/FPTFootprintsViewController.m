@@ -8,6 +8,7 @@
 
 #import "FPTFootprintsViewController.h"
 #import "FPTProfileViewController.h"
+#import "FPTSignInViewController.h"
 
 @implementation FPTFootprintsViewController
 
@@ -18,6 +19,15 @@
     
     self.title = NSLocalizedString(@"Footprint", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Profile", nil) style:UIBarButtonItemStylePlain target:self action:@selector(showProfile:)];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    FPTSignInViewController *signInViewController = [[FPTSignInViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:signInViewController];
+    [self presentViewController:navigationController animated:animated completion:nil];
 }
 
 
