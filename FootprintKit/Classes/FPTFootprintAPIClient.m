@@ -13,6 +13,7 @@
 #import "FPTFootprintAPIClient.h"
 #import "FPTDefines.h"
 #import "FPTUser.h"
+#import "FPTFootprint.h"
 #import "NSString+FootprintKit.h"
 
 static NSString *const FPTFootprintAPIClientErrorDomain = @"FPTFootprintAPIClient";
@@ -111,6 +112,8 @@ static NSString *const FPTFootprintAPIClientErrorDomain = @"FPTFootprintAPIClien
     };
     
     return [self POST:@"user/login.php" parameters:parameters success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        NSLog(@"Sign in:%@", responseObject);
+        
         BOOL succeeded = [responseObject[@"ok"] integerValue] == 1;
         
         if (succeeded) {
@@ -154,11 +157,68 @@ static NSString *const FPTFootprintAPIClientErrorDomain = @"FPTFootprintAPIClien
         @"token": self.accessToken,
     };
     
-    return [self GET:@"footprint/discover.php" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"[FPTFootprintAPIClient] Get Global Footprints Succeeded: %@", responseObject);
+    return [self GET:@"footprint/discover.php" parameters:parameters success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        BOOL succeeded = [responseObject[@"ok"] integerValue] == 1;
         
-        if (success) {
-            success(task, responseObject);
+        if (succeeded) {
+            NSArray *footprints = responseObject[@"data"];
+            
+            __weak NSManagedObjectContext *context = [FPTFootprint mainQueueContext];
+            [context performBlockAndWait:^{
+                for (NSDictionary *dictionary in footprints) {
+                    [FPTFootprint objectWithDictionary:dictionary];
+                }
+                [context save:nil];
+            }];
+            
+            if (success) {
+                success(task, responseObject);
+            }
+        } else {
+            NSString *errorMessage = responseObject[@"error"];
+            if (failure) {
+                failure(task, [NSError errorWithDomain:FPTFootprintAPIClientErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey: errorMessage}]);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"[FPTFootprintAPIClient] Get Global Footprints Failed: %@", error.description);
+        
+        if (failure) {
+            failure(task, error);
+        }
+    }];
+}
+
+
+- (NSURLSessionDataTask *)getMyFootprintsWithSuccess:(FPTFootprintAPIClientSuccessBlock)success
+                                             failure:(FPTFootprintAPIClientFailureBlock)failure
+{
+    NSDictionary *parameters = @{
+        @"token": self.accessToken,
+    };
+    
+    return [self GET:@"user/myfootprint.php" parameters:parameters success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        BOOL succeeded = [responseObject[@"ok"] integerValue] == 1;
+        
+        if (succeeded) {
+            NSArray *footprints = responseObject[@"data"];
+            
+            __weak NSManagedObjectContext *context = [FPTFootprint mainQueueContext];
+            [context performBlockAndWait:^{
+                for (NSDictionary *dictionary in footprints) {
+                    [FPTFootprint objectWithDictionary:dictionary];
+                }
+                [context save:nil];
+            }];
+            
+            if (success) {
+                success(task, responseObject);
+            }
+        } else {
+            NSString *errorMessage = responseObject[@"error"];
+            if (failure) {
+                failure(task, [NSError errorWithDomain:FPTFootprintAPIClientErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey: errorMessage}]);
+            }
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"[FPTFootprintAPIClient] Get Global Footprints Failed: %@", error.description);

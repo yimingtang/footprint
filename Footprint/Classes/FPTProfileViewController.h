@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Yiming Tang. All rights reserved.
 //
 
-@import UIKit;
+@import SSDataKit;
 
-@interface FPTProfileViewController : UIViewController
+@interface FPTProfileViewController : SSManagedTableViewController
 
 @end

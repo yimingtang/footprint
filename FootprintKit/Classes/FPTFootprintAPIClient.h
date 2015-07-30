@@ -25,6 +25,8 @@ typedef void (^FPTFootprintAPIClientFailureBlock)(NSURLSessionDataTask *task, NS
 
 // Footprint
 - (NSURLSessionDataTask *)getGlobalFootprintsWithSuccess:(FPTFootprintAPIClientSuccessBlock)success failure:(FPTFootprintAPIClientFailureBlock)failure;
+- (NSURLSessionDataTask *)getMyFootprintsWithSuccess:(FPTFootprintAPIClientSuccessBlock)success failure:(FPTFootprintAPIClientFailureBlock)failure;
+- (NSURLSessionDataTask *)getGlobalFootprintsWithIndex:(NSUInteger)index length:(NSUInteger)length success:(FPTFootprintAPIClientSuccessBlock)success failure:(FPTFootprintAPIClientFailureBlock)failure;
 - (NSURLSessionDataTask *)getFootprintsWithUser:(FPTUser *)user success:(FPTFootprintAPIClientSuccessBlock)success failure:(FPTFootprintAPIClientFailureBlock)failure;
 - (NSURLSessionDataTask *)createFootprint:(FPTFootprint *)footprint success:(FPTFootprintAPIClientSuccessBlock)success failure:(FPTFootprintAPIClientFailureBlock)failure;
 - (NSURLSessionDataTask *)deleteFootprint:(FPTFootprint *)footprint success:(FPTFootprintAPIClientSuccessBlock)success failure:(FPTFootprintAPIClientFailureBlock)failure;

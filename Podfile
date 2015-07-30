@@ -15,6 +15,12 @@ pod 'SSKeychain'
 # A clean and lightweight progress HUD for your iOS app.
 pod 'SVProgressHUD'
 
+# An iPhone/iPad mini WebKit browser controller, useful for in-app web browsing experience.
+pod 'DZNWebViewController'
+
+
+pod 'SVPullToRefresh'
+
 end
 
 target 'FootprintTests' do

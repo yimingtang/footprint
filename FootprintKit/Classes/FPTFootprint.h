@@ -13,6 +13,7 @@
 
 @interface FPTFootprint : FPTRemoteManagedObject
 
+@property (nonatomic) NSString *remoteID;
 @property (nonatomic) NSNumber *duration;
 @property (nonatomic) NSNumber *manually;
 @property (nonatomic) FPTUser *user;

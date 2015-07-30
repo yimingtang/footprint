@@ -16,5 +16,13 @@
 @dynamic url;
 @dynamic footprints;
 @dynamic tags;
+@dynamic remoteID;
+
+- (void)unpackDictionary:(NSDictionary *)dictionary {
+    [super unpackDictionary:dictionary];
+    
+    self.url = dictionary[@"url"];
+    self.title = dictionary[@"title"];
+}
 
 @end

@@ -10,6 +10,7 @@
 
 @interface FPTPost : FPTRemoteManagedObject
 
+@property (nonatomic) NSString *remoteID;
 @property (nonatomic) NSString *url;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSSet *footprints;

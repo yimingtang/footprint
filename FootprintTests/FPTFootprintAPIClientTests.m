@@ -21,13 +21,14 @@
 
 - (void)setUp {
     [super setUp];
-    
+    NSLog(@"Setup");
     self.client = [FPTFootprintAPIClient sharedClient];
 }
 
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    NSLog(@"tearDOwn");
     [super tearDown];
 }
 
@@ -43,17 +44,10 @@
     // when
     [self.client signUpWithUsername:username password:password success:^(NSURLSessionDataTask *task, id responseObject) {
         [expectation fulfill];
-        
-        NSDictionary *dictionary = responseObject;
-        
-        // then
-        XCTAssertNotNil(responseObject, @"should have a responseObject");
-        XCTAssertTrue([dictionary[@"ok"] integerValue] == 0, "should have status code: 0");
-        XCTAssertNil(dictionary[@"data"], @"should not have data");
-        XCTAssertNotNil(dictionary[@"error"], @"should have an error");
+        XCTAssertNil(responseObject, @"should not succeed");
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [expectation fulfill];
-        XCTAssertNil(error, @"should not have an error");
+        XCTAssertNotNil(error, @"should have an error");
     }];
     
     [self waitForExpectationsWithTimeout:5.0 handler:nil];
@@ -99,17 +93,10 @@
     // when
     [self.client signInWithUsername:username password:password success:^(NSURLSessionDataTask *task, id responseObject) {
         [expectation fulfill];
-        
-        NSDictionary *dictionary = responseObject;
-        
-        // then
-        XCTAssertNotNil(responseObject, @"should have a responseObject");
-        XCTAssertTrue([dictionary[@"ok"] integerValue] == 0, "should have status code: 0");
-        XCTAssertNil(dictionary[@"data"], @"should not have data");
-        XCTAssertNotNil(dictionary[@"error"], @"should have an error");
+        XCTAssertNil(responseObject, @"shoul not succeed");
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [expectation fulfill];
-        XCTAssertNil(error, @"should not have an error");
+        XCTAssertNotNil(error, @"should have an error");
     }];
     
     [self waitForExpectationsWithTimeout:5.0 handler:nil];
@@ -118,8 +105,8 @@
 
 - (void)testSignInWithValidInfo {
     // given
-    NSString *username = @"example_user";
-    NSString *password = @"password";
+    NSString *username = @"tym";
+    NSString *password = @"123456";
     
     XCTestExpectation *expectation = [self expectationWithDescription:@"sign in with invalid info"];
     
@@ -171,6 +158,8 @@
         [expectation fulfill];
         XCTAssertNil(error, @"should not have an error");
     }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
 }
 
 @end

@@ -82,7 +82,7 @@ static NSString *const kFPTSignInViewControllerCellIdentifier = @"cell";
 #pragma mark - Class Methods
 
 + (CGFloat)textFieldWidth {
-    return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 360.0f : 240.0f;
+    return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 360.0f : 180.0f;
 }
 
 

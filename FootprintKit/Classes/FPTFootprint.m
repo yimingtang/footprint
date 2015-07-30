@@ -7,6 +7,8 @@
 //
 
 #import "FPTFootprint.h"
+#import "FPTUser.h"
+#import "FPTPost.h"
 
 @implementation FPTFootprint
 
@@ -14,5 +16,31 @@
 @dynamic manually;
 @dynamic user;
 @dynamic post;
+@dynamic remoteID;
+
+#pragma mark - SSRemoteManagedObejct
+
+- (void)unpackDictionary:(NSDictionary *)dictionary {
+    [super unpackDictionary:dictionary];
+    
+    static NSNumberFormatter *numberFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    });
+
+    self.manually = [numberFormatter numberFromString:dictionary[@"initiative"]];
+    self.createdAt = [[self class] parseDate:dictionary[@"timestamp"]];
+    
+    if (dictionary[@"userId"]) {
+        NSNumber *remoteID = [numberFormatter numberFromString:dictionary[@"userId"]];
+        self.user = [FPTUser objectWithDictionary:@{@"userId": remoteID} context:self.managedObjectContext];
+    }
+    
+    if (dictionary[@"foot"]) {
+        self.post = [FPTPost objectWithDictionary:dictionary[@"foot"] context:self.managedObjectContext];
+    }
+}
 
 @end

@@ -8,6 +8,7 @@
 
 #import "FPTAppDelegate.h"
 #import "FPTFootprintsViewController.h"
+@import SSDataKit;
 @import AFNetworking;
 
 @interface FPTAppDelegate ()
@@ -32,6 +33,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Configure network stuff
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [SSManagedObject setAutomaticallyResetsPersistentStore:YES];
     
     // Set root view controller
     FPTFootprintsViewController *footprintsViewController = [[FPTFootprintsViewController alloc] init];
